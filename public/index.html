@@ -22,13 +22,20 @@
     <link rel="stylesheet" href="../src/css/style.css" />
   </head>
   <body class="container">
-    <div class="calculator">
+    <div id="theme" class="dark">
       <div class="display">
-        <input type="text" id="display" readonly />
+        <label for="toggle" class="switch">
+          <input type="checkbox" name="" id="toggle" />
+          <span id="switcher" class="sliderDark round"> </span>
+        </label>
+        <input type="text" id="display" class="displayDark" readonly />
       </div>
       <div class="buttons">
         <div class="line1">
-          <button class="allClear" onclick="setAllClear()">AC</button>
+          <button class="allClear" id="allClear" onclick="setAllClear()">
+            AC
+          </button>
+
           <button class="percentage" onclick="setPercentage()">%</button>
           <button class="operator" onclick="setOperator('/')">÷</button>
         </div>
@@ -52,7 +59,7 @@
         </div>
         <div class="line5">
           <button class="number" onclick="setNumber('0')">0</button>
-          <button class="number" onclick="setNumber('.')">.</button>
+          <button class="number" onclick="setPoint('.')">.</button>
           <button class="equals" onclick="calculate()">=</button>
         </div>
       </div>
