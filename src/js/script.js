@@ -44,7 +44,12 @@ function setPercentage() {
   display = document.getElementById("display").value;
   result = eval(display.toString()) / 100;
 
-  document.getElementById("display").value = result;
+  if (display == "") {
+    document.getElementById("display").value = "";
+  } else {
+    document.getElementById("display").value = result
+  }
+  ;
 }
 
 function setPoint(number) {
